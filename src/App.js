@@ -4,7 +4,7 @@ import router from "./Router/Routes/Routes";
 
 function App() {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto" data-theme="cupcake">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
