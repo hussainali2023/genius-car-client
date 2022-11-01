@@ -23,7 +23,7 @@ const About = () => {
           <h1 className="my-5 text-5xl font-bold">
             We are qualified <br />
             & of experience <br />
-            in this field
+            in this field.
           </h1>
           <p className="py-6">
             There are many variations of passages of Lorem Ipsum available, but
