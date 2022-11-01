@@ -11,6 +11,24 @@ const Banner = () => {
     <div className="carousel w-full">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full" />
+        <div className="absolute flex-wrap justify-end transform -translate-y-1/2 left-24 top-1/4">
+          <h1 className=" text-6xl text-white font-bold ">
+            Affordable <br />
+            Price for Car <br />
+            Servicing
+          </h1>
+        </div>
+        <div className="absolute flex-wrap justify-end transform -translate-y-1/2 left-24 top-1/2 w-2/5">
+          <p className=" text-xl ">
+            There are many variations of passages of available, but the majority
+            have suffered alteration in some form
+          </p>
+        </div>
+        <div className="absolute flex-wrap justify-start transform -translate-y-1/2 left-24 top-3/4 w-2/5">
+          <button className=" btn btn-warning mr-5">Discover</button>
+          <button className="btn btn-outline btn-warning">Warning</button>
+        </div>
+
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
           <a href="#slide6" className="btn btn-circle mr-5">
             ❮
