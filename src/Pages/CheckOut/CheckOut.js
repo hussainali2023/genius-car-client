@@ -23,6 +23,26 @@ const CheckOut = () => {
       phone,
       message,
     };
+    if (phone.length > 10) {
+      alert("Phone number should be 10 characters or longer");
+    } else {
+      fetch("http://localhost:5000/orders", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(order),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.acknowledged) {
+            alert("Order Placed successfully");
+            form.reset();
+          }
+        })
+        .catch((error) => console.error(error));
+    }
   };
 
   return (
@@ -36,6 +56,7 @@ const CheckOut = () => {
             name="firstName"
             placeholder="First Name"
             className="input input-bordered w-full"
+            required
           />
           <input
             type="text"
@@ -48,6 +69,7 @@ const CheckOut = () => {
             name="phone"
             placeholder="Your Phone"
             className="input input-bordered w-full"
+            required
           />
           <input
             type="text"
